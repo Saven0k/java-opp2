@@ -1,4 +1,5 @@
 ﻿import java.util.ArrayList;
+import java.util.Collections;
 
 public class LionCage implements AnimalCage{
     
@@ -6,7 +7,7 @@ public class LionCage implements AnimalCage{
     private ArrayList lions;
 
     public LionCage(){
-        lions = new ArrayList<>();
+        lions = new ArrayList<Lion>();
     }
 
     public LionCage(ArrayList<Lion> lions){
@@ -20,11 +21,14 @@ public class LionCage implements AnimalCage{
         return lions.size();
     }
 
-    @Override
-    public String getFeedToCage(int countPiecesOfMeat){
-        double PieceOfMetFOrOneLion = countPiecesOfMeat / (lions.size());
-        return "Каждый лев получил по " + PieceOfMetFOrOneLion + " кусков мяса!"; 
-    }
+    // @Override
+    // public String getFeedToCage(int countPiecesOfMeat){
+    //     double PieceOfMetFOrOneLion = countPiecesOfMeat / (lions.size());
+    //     for (Wolf an : lions) {
+    //         an = an.feed(10);
+    //     }
+    //     return "Каждый лев получил по " + PieceOfMetFOrOneLion + " кусков мяса!"; 
+    // }
 
     @Override
     public String ClearCage(int levelDirty){
@@ -32,18 +36,29 @@ public class LionCage implements AnimalCage{
         return "Клетка отчищена";
     }
 
-    @Override
-    public String getFirstAnimal(){
-        for (int i = 0; i < 1 ; i++) {
-            return lions.get(0).toString();
-        }
+    // @Override
+    // public Animal getFirstAnimal(){
+    //     for (int i = 0; i < 1 ; i++) {
+    //         return (Animal)lions.get(0);
+    //     }
+    // }
+
+    public void sortlions(){
+        Collections.sort(lions);
     }
 
-    @Override
-    public String toSting(){
-        return "LionCage{" +    
-                "lions=" + lions +
-                ", clean=" + levelDirty +
-                '}';
+    public ArrayList<Lion> getLions(){
+        return lions;
     }
+
+    public void sortLionsByManeVolume(){
+        Collections.sort(lions, new LionComporator());
+    }
+    @Override
+    public String toString(){
+        return " LionCage{" +
+            " lions = "+ lions +
+            '}';
+    }
+    
 }
