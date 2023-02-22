@@ -24,7 +24,7 @@ public class WolfCage implements AnimalCage , Iterable<Wolf>{
 
     @Override
     public int addAnimalINCage(Animal animal){
-        wolfs.add((Lion) animal);
+        wolfs.add((Wolf) animal);
         return wolfs.size();
     }
 
@@ -57,6 +57,7 @@ public class WolfCage implements AnimalCage , Iterable<Wolf>{
     public Iterator<Wolf> iterator(){
         return new WolfIterator(wolfs);
     }
+    
 
     
 

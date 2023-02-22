@@ -20,14 +20,14 @@ public class SnakeCage implements AnimalCage{
         return snakes.size();
     }
 
-    @Override
-    public String getFeedToCage(int countPiecesOfMeat){
-        double PieceOfMetFOrOneLion = countPiecesOfMeat / (snakes.size());
-        for (Snake an : snakes) {
-            an = an.feed(10);
-        }
-        return "Каждый лев получил по " + PieceOfMetFOrOneLion + " кусков мяса!"; 
-    }
+    // @Override
+    // public String getFeedToCage(int countPiecesOfMeat){
+    //     double PieceOfMetFOrOneLion = countPiecesOfMeat / (snakes.size());
+    //     for (Snake an : snakes) {
+    //         an = an.feed(10);
+    //     }
+    //     return "Каждый лев получил по " + PieceOfMetFOrOneLion + " кусков мяса!"; 
+    // }
 
     @Override
     public String ClearCage(int levelDirty){
@@ -35,12 +35,12 @@ public class SnakeCage implements AnimalCage{
         return "Клетка отчищена";
     }
 
-    @Override
-    public Animal getFirstAnimal(){
-        for (int i = 0; i < 1 ; i++) {
-            return (Animal)snakes.get(0);
-        }
-    }
+    // @Override
+    // public Animal getFirstAnimal(){
+    //     for (int i = 0; i < 1 ; i++) {
+    //         return (Animal)snakes.get(0);
+    //     }
+    // }
 
     
 }
