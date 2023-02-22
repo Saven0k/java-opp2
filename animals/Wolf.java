@@ -27,4 +27,10 @@
     public String getType(){
         return TYPE;
     }
+    @Override
+    public String toString(){
+        return " Wolf{" +
+            " age = "+ this.age +
+            '}';
+    }
 }
