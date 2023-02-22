@@ -1,4 +1,5 @@
 ﻿import java.util.ArrayList;
+import java.util.Random;
 
 import animals.*;
 import cage.*;
@@ -6,10 +7,10 @@ import java.util.ArrayList;
 
 public class LionsFactory {
 
-    static public  ArrayList<Lion> createLions (int lionCount){
+     static public  ArrayList<Lion> createLions (int lionCount ){
         ArrayList<Lion> lionInCage = new ArrayList<>(lionCount);
-        for (int i = 0; i < lionCount; i++) {
-            Lion lion = new Lion(5.5, 8, 900, 4);
+        for (int i = 0; i < 5; i++) {
+            Lion lion = new Lion(new Random().nextInt(10), 8, 900, 4);
             lionInCage.add(lion);
         }
         return lionInCage;
