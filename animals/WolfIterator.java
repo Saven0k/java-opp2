@@ -2,21 +2,21 @@
 import java.util.List;
 import java.util.Iterator;
 
-public class WolfIterator  implements Iterator<Wolf> {
+public class WolfIterator implements Iterator<Wolf> {
     private final List<Wolf> wolfs;
     private int cursor;
 
-    public WolfIterator(List<Wolf> wolfs){
+    public WolfIterator(List<Wolf> wolfs) {
         this.wolfs = wolfs;
     }
 
     @Override
-    public boolean hasNext(){
+    public boolean hasNext() {
         return cursor + 1 < wolfs.size();
     }
-    
+
     @Override
-    public Wolf next(){
+    public Wolf next() {
         return wolfs.get(cursor++);
     }
 }
