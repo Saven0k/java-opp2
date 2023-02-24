@@ -1,7 +1,7 @@
 ﻿import java.util.ArrayList;
 import java.util.Collections;
 
-public class LionCage implements AnimalCage{
+public class LionCage implements AnimalCage<Lion>{
     
     private  int levelDirty;
     private ArrayList lions;
@@ -16,7 +16,7 @@ public class LionCage implements AnimalCage{
 
 
     @Override
-    public int addAnimalINCage(Animal animal){
+    public int addAnimalINCage(Lion animal){
         lions.add((Lion) animal);
         return lions.size();
     }

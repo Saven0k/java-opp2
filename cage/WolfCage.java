@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class WolfCage implements AnimalCage , Iterable<Wolf>{
+public class WolfCage implements AnimalCage<Wolf> , Iterable<Wolf>{
     
     private List<Wolf> wolfs1;
     private  int levelDirty;
@@ -23,7 +23,7 @@ public class WolfCage implements AnimalCage , Iterable<Wolf>{
 
 
     @Override
-    public int addAnimalINCage(Animal animal){
+    public int addWolfINCage(Wolf animal){
         wolfs.add((Wolf) animal);
         return wolfs.size();
     }

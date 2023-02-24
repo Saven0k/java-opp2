@@ -1,6 +1,6 @@
 ﻿import java.util.ArrayList;
 
-public class SnakeCage implements AnimalCage{
+public class SnakeCage implements AnimalCage<Snake>{
     
     private  int levelDirty;
     private ArrayList snakes;
@@ -15,7 +15,7 @@ public class SnakeCage implements AnimalCage{
 
 
     @Override
-    public int addAnimalINCage(Animal animal){
+    public int addSnakeINCage(Snake animal){
         snakes.add((Snake) animal);
         return snakes.size();
     }
