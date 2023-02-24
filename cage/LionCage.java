@@ -1,22 +1,24 @@
 ﻿import java.util.ArrayList;
 import java.util.Collections;
 
-public class LionCage implements AnimalCage<Lion>{
-    
-    private  int levelDirty;
+import Comporator.LionComporator;
+
+public class LionCage implements AnimalCage<Lion> {
+
+    private int levelDirty;
     private ArrayList lions;
 
-    public LionCage(){
+    public LionCage() {
         lions = new ArrayList<Lion>();
     }
 
-    public LionCage(ArrayList<Lion> lions){
+    public LionCage(ArrayList<Lion> lions) {
         this.lions = lions;
     }
 
 
     @Override
-    public int addAnimalINCage(Lion animal){
+    public int addAnimalINCage(Lion animal) {
         lions.add((Lion) animal);
         return lions.size();
     }
@@ -31,7 +33,7 @@ public class LionCage implements AnimalCage<Lion>{
     // }
 
     @Override
-    public String ClearCage(int levelDirty){
+    public String ClearCage(int levelDirty) {
         levelDirty = 0;
         return "Клетка отчищена";
     }
@@ -43,22 +45,25 @@ public class LionCage implements AnimalCage<Lion>{
     //     }
     // }
 
-    public void sortlions(){
+    public void sortlions() {
         Collections.sort(lions);
     }
 
-    public ArrayList<Lion> getLions(){
+    public ArrayList<Lion> getLions() {
         return lions;
     }
 
-    public void sortLionsByManeVolume(){
+    public void sortLionsByManeVolume() {
         Collections.sort(lions, new LionComporator());
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return " LionCage{" +
-            " lions = "+ lions +
-            '}';
+                " lions = " + lions +
+                '}';
     }
+
     
+
 }

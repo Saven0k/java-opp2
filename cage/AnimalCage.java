@@ -1,9 +1,8 @@
-﻿import animals.*;
-import java.util.List;
+﻿import java.util.List;
 
 
-public interface AnimalCage<T extends Animal>{
-    public abstract T addAnimalINCage(T animal);
+public interface AnimalCage<T extends Animal> {
+    public abstract int addAnimalINCage(T animal);
 
     // public abstract String getFeedToCage(int countPiecesOfMeat);
 
@@ -11,7 +10,7 @@ public interface AnimalCage<T extends Animal>{
 
     // public abstract Animal getFirstAnimal();
 
-    public void  sortByAge();
-    
+    // public void sortByAge();
+
 
 }

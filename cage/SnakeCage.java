@@ -1,22 +1,23 @@
 ﻿import java.util.ArrayList;
+import java.util.Collection;
 
-public class SnakeCage implements AnimalCage<Snake>{
-    
-    private  int levelDirty;
+public class SnakeCage implements AnimalCage<Snake> {
+
+    private int levelDirty;
     private ArrayList snakes;
 
-    public SnakeCage(){
+    public SnakeCage() {
         snakes = new ArrayList<Snake>();
     }
 
-    public SnakeCage(ArrayList<Snake> snakes){
+    public SnakeCage(ArrayList<Snake> snakes) {
         this.snakes = snakes;
     }
 
 
     @Override
-    public int addSnakeINCage(Snake animal){
-        snakes.add((Snake) animal);
+    public int addAnimalINCage(Snake animal) {
+        this.snakes.add(animal);
         return snakes.size();
     }
 
@@ -30,10 +31,13 @@ public class SnakeCage implements AnimalCage<Snake>{
     // }
 
     @Override
-    public String ClearCage(int levelDirty){
+    public String ClearCage(int levelDirty) {
         levelDirty = 0;
         return "Клетка отчищена";
     }
+
+
+    
 
     // @Override
     // public Animal getFirstAnimal(){
@@ -42,5 +46,5 @@ public class SnakeCage implements AnimalCage<Snake>{
     //     }
     // }
 
-    
+
 }
