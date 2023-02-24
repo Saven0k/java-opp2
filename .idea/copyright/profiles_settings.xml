@@ -1,0 +1,10 @@
+<component name="CopyrightManager">
+  <settings>
+    <module2copyright>
+      <element module="Non-Project Files" copyright="toString" />
+      <element module="Project Files" copyright="toString" />
+      <element module="Open Files" copyright="toString" />
+      <element module="Tests" copyright="toString" />
+    </module2copyright>
+  </settings>
+</component>
